@@ -1,0 +1,509 @@
+/* Reset styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #4b75a0, #68b7c4);
+    color: #333;
+}
+
+/* Global padding and margin */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Reduced padding for a tighter header */
+    background-color: #333;
+    color: white;
+    position: relative;
+    z-index: 10;
+}
+
+/* Logo Styling */
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Navigation Menu */
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+    color: #f39c12; /* Hover effect color */
+}
+
+/* Optional: If you need to reduce the top margin of the body content */
+body {
+    margin-top: 0; /* Removes any default margin on the top */
+}
+
+
+.header .menu-icon {
+    display: none; /* Hidden by default */
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .header .menu-icon {
+        display: block; /* Show menu icon on smaller screens */
+    }
+
+    .nav ul {
+        display: none; /* Hide the navigation menu by default */
+        flex-direction: column;
+        background: #2c3e50;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%; /* Full width on small screens */
+        text-align: center;
+    }
+
+    .nav ul.show {
+        display: flex; /* Show the menu when toggled */
+    }
+}
+
+/* Home (Index) Page */
+.home-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 50px;
+    background: linear-gradient(135deg, #4b75a0, #68b7c4);
+    color: #fff;
+    min-height: 100vh;
+    text-align: left; /* Align text to the left */
+}
+
+.home-section .content {
+    flex: 1; /* Text container takes up available space */
+    max-width: 600px;
+    margin: 20px;
+}
+
+.home-section h1 {
+    font-size: 2.8em;
+    margin-bottom: 15px;
+    animation: fadeIn 2s;
+    color: rgb(49, 32, 205);
+}
+
+.home-section h2 {
+    font-size: 2.0em;
+    color: rgb(71, 42, 217);
+    margin-bottom: 25px;
+    animation: fadeIn 2s;
+    text-align: left;
+    
+}
+
+.home-section p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    animation: fadeIn 2s;
+}
+
+.home-section .image-container {
+    flex: 0 0 250px; /* Fix the width for the image container */
+    text-align: center;
+    margin: 20px;
+}
+
+.home-section .image-container img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive for Screens Below 768px */
+@media (max-width: 768px) {
+    .home-section {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the left */
+        padding: 20px;
+        text-align: left; /* Keep text aligned to the left */
+    }
+
+    .home-section .image-container {
+        display: none; /* Hide the image on smaller screens */
+    }
+
+    .home-section .content {
+        width: 100%; /* Make text content span full width */
+        max-width: none; /* Remove width restriction */
+        margin: 0; /* No extra margins on small screens */
+    }
+
+    .home-section h1 {
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+
+    .home-section h2 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    .home-section p {
+        font-size: 1em;
+        line-height: 1.6;
+    }
+}
+
+
+
+.aligned-paragraph {
+    text-align: justify; /* Ensures text is evenly aligned on both sides */
+    margin: 20px; /* Adds space around the paragraph */
+    line-height: 1.6; /* Improves readability with line spacing */
+}
+
+/* Social Icons in Button Style */
+.social-icons {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.icon-box {
+    padding: 15px 30px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #333;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+}
+
+.icon-box:hover {
+    background-color: #f39c12;
+    transform: scale(1.1);
+}
+
+.icon-box.linkedin {
+    background-color: #0077b5;
+}
+
+.icon-box.github {
+    background-color: black;
+}
+
+.icon-box.twitter {
+    background-color: gray;
+}
+
+/* About Page */
+
+/* ─── ABOUT SECTION ─── */
+.about-section {
+    /** Use same gradient as other pages **/
+    background: linear-gradient(135deg, #4b75a0, #68b7c4);
+    color: #fff;                /* make text white so it stands out */
+    padding: 80px 50px;
+    position: relative;
+    text-align: left;           /* ensure paragraphs, lists, etc. are left-aligned */
+  }
+  
+  /* Center only the headings */
+  .about-section h1,
+  .about-section h2 {
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    padding : 1px;
+    transition: color 0.3s ease;
+    color: #333;
+  }
+
+  .about-section h3,h4{
+    color:#333;
+  }
+  
+  /* Optional: Heading hover color */
+  .about-section h1:hover,
+  .about-section h2:hover {
+    color: #ffcc00;
+  }
+  
+  /* Keep timeline and list text left aligned */
+  .about-section .timeline-item,
+  .about-section .skills-list,
+  .about-section .certifications-list {
+    text-align: left;
+    list-style-position: inside;
+    color: #f7f4f4;  /* ensure list text is readable on gradient */
+  }
+  
+  /* If you have paragraphs directly under .about-section */
+  .about-section p {
+    text-align: left;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+
+.image-container img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Round image */
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute; /* Position image absolutely */
+    top: 100px; /* Adjust distance from top */
+    right: 100px; /* Adjust distance from right */
+}
+
+/* Responsive for Screens Below 768px */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the left */
+        padding: 20px;
+        text-align: left; /* Keep text aligned to the left */
+    }
+
+    .image-container img{
+        display: none; /* Hide the image on smaller screens */
+    }
+
+    .about-section .content {
+        width: 100%; /* Make text content span full width */
+        max-width: none; /* Remove width restriction */
+        margin: 0; /* No extra margins on small screens */
+    }
+
+    .about-section h2 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    .about-section p {
+        font-size: 1em;
+        line-height: 1.6;
+    }
+}
+
+
+/* Projects Page */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px 50px;
+    background-color: rgb(45, 130, 163); /* Light background color */
+    color: #171717;
+    margin-top: 100px; /* Adjust for fixed header */
+}
+
+.project-card {
+    background: rgb(110, 169, 192);;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #faf4f4;
+    text-align: left;
+    list-style-position: inside;
+}
+
+.project-card h2,h5,b {
+    color: #333;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-card p {
+    font-size: 1em;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* Contact Page */
+.contact-section {
+    padding: 200px 150px;
+    background-color: #1aa8cc; /* Light background color */
+    color: #333;
+    text-align: center;
+    margin-top: 300px; /* Adjust for fixed header */
+}
+
+.contact-section a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+.contact-section a:hover {
+    color: #0056b3;
+}
+
+.contact-item {
+    margin-bottom: 20px;
+}
+
+.cta-buttons .btn {
+    padding: 15px 30px;               /* match icon-box padding */
+    font-size: 20px;                  /* same size as .icon-box text */
+    border-radius: 25px;              /* round corners */
+    background-color: #333;           /* same default bg */
+    color: #fff;                      /* white text */
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 0 10px;                   /* spacing between buttons */
+  }
+  .cta-buttons .btn:hover {
+    background-color: #f39c12;        /* same hover color as icon-box */
+    transform: scale(1.1);
+  }
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #2c3e50;
+    color: #fff;
+}
+
+footer p {
+    font-size: 14px;
+}
+ 
+/* ─── MOBILE SPECIALS (≤400px) ─── */
+@media (max-width: 400px) {
+    /* Shrink header padding & nav gaps */
+    .header {
+      padding: 8px 10px;
+    }
+    .nav ul {
+      gap: 10px;
+    }
+    .nav ul li a {
+      font-size: 14px;
+    }
+  
+    /* Home section tweaks */
+    .home-section {
+      padding: 20px 10px;
+    }
+    .home-section h1 {
+      font-size: 1.6em;
+    }
+    .home-section h2 {
+      font-size: 1.2em;
+      margin-bottom: 15px;
+    }
+    .home-section p {
+      font-size: 0.9em;
+      margin-bottom: 15px;
+    }
+    .home-section .image-container,
+    .about-section .image-container {
+      /* Allow the profile image to flow with content */
+      position: static;
+      width: 120px;
+      height: 120px;
+      margin: 15px auto;
+      display: block;
+    }
+    .home-section .image-container img,
+    .about-section .image-container img {
+      width: 100%;
+      height: 100%;
+    }
+  
+    /* Button/Icon shrink */
+    .icon-box,
+    .cta-buttons .btn {
+      padding: 8px 12px;
+      font-size: 14px;
+      border-radius: 20px;
+    }
+  
+    /* About section tweaks */
+    .about-section {
+      padding: 20px 15px;
+    }
+    .about-section h1,
+    .about-section h2 {
+      font-size: 1.2em;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    .about-section p,
+    .about-section .skills-list,
+    .about-section .certifications-list,
+    .about-section .timeline-item {
+      font-size: 0.9em;
+      line-height: 1.4;
+    }
+  
+    /* Projects grid to single column & padding shrink */
+    .project-grid {
+      padding: 10px;
+      grid-template-columns: 1fr;
+    }
+    .project-card {
+      padding: 12px;
+    }
+    .project-card h2 {
+      font-size: 1em;
+    }
+    .project-card p,
+    .project-card ul {
+      font-size: 0.9em;
+    }
+  
+    /* Contact section spacing */
+    .contact-section {
+      padding: 100px 20px;
+    }
+    .contact-section a {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 0.9em;
+    }
+  
+    /* Footer text */
+    footer p {
+      font-size: 12px;
+    }
+  }
+ 
+  
